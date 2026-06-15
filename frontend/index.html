@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PixelMart - 安全测试靶场</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+      /* Pixel art rendering */
+      * { image-rendering: pixelated; }
+      body { background: #0f0f23; }
+      /* Scanline effect */
+      body::after {
+        content: '';
+        position: fixed;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 2px,
+          rgba(0,0,0,0.1) 2px,
+          rgba(0,0,0,0.1) 4px
+        );
+        pointer-events: none;
+        z-index: 9999;
+      }
+      /* Console easter egg */
+    </style>
+    <!-- A06: Old jQuery version for XSS challenge -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>
+      console.log('%c🐱 PixelMart v1.0 - 安全测试靶场', 'font-size: 20px; color: #00ff41;');
+      console.log('%c💡 提示: 试试查看 /robots.txt', 'color: #ffd700;');
+      console.log('%c🔍 每个功能都可能藏有漏洞，保持好奇心！', 'color: #00bfff;');
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
