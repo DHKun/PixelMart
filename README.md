@@ -27,7 +27,7 @@
 | 🆓 **自由探索** | 无顺序限制，任意挑战，想打哪个打哪个 |
 | 💡 **渐进式提示** | 模糊提示 → 弹窗确认 → 清晰显示，保护挑战乐趣 |
 | 🏆 **Flag 提交中心** | 统一验证 + 进度追踪 + 徽章墙 |
-| 🐳 **一键部署** | Docker Compose 启动，前后端分离架构 |
+| 🐳 **一键部署** | Docker Compose 启动，单容器部署 |
 
 ---
 
@@ -47,19 +47,18 @@
 
 ```bash
 # 克隆仓库
-git clone https://github.com/your-username/pixelmart-owasp-top10.git
-cd pixelmart-owasp-top10
+git clone https://github.com/fb0sh/PixelMart.git
+cd PixelMart
 
 # 一键启动
 docker compose up -d
 ```
 
-打开浏览器访问 **http://localhost:3000** 🎉
+打开浏览器访问 **http://localhost:8080** 🎉
 
 | 服务 | 地址 | 说明 |
 |------|------|------|
-| 🎨 前端 | http://localhost:3000 | React 商城界面 |
-| ⚙️ 后端 | http://localhost:5000 | Flask API |
+| 🕹️ PixelMart | http://localhost:8080 | 前端 + 后端（单容器） |
 | 📖 WriteUp | [writeup.md](./writeup.md) | 完整攻略 |
 
 ---
@@ -79,7 +78,7 @@ docker compose up -d
 | A09 | 日志泄露 | ⭐⭐ | 未鉴权日志泄露敏感信息 | `FloatCTF{...}` |
 | A10 | SSRF | ⭐⭐⭐ | 图片预览功能访问内部接口 | `FloatCTF{...}` |
 
-> 💡 **提示**: Flag 格式为 `FloatCTF{...}`，在 [Flag 提交中心](http://localhost:3000/flag-submit) 验证。
+> 💡 **提示**: Flag 格式为 `FloatCTF{...}`，在 [Flag 提交中心](http://localhost:8080/flag-submit) 验证。
 
 ---
 
@@ -111,7 +110,7 @@ graph LR
 ## 📁 项目结构
 
 ```
-pixelmart-owasp-top10/
+PixelMart/
 ├── docker-compose.yml          # Docker 编排
 ├── README.md                   # 本文件
 ├── writeup.md                  # 完整攻略
@@ -257,7 +256,7 @@ pixelmart-owasp-top10/
 
 **PixelMart** — 在像素世界中学习安全 🎮🔒
 
-[![GitHub stars](https://img.shields.io/github/stars/your-username/pixelmart-owasp-top10?style=social)](https://github.com/your-username/pixelmart-owasp-top10)
-[![GitHub forks](https://img.shields.io/github/forks/your-username/pixelmart-owasp-top10?style=social)](https://github.com/your-username/pixelmart-owasp-top10)
+[![GitHub stars](https://img.shields.io/github/stars/fb0sh/PixelMart?style=social)](https://github.com/fb0sh/PixelMart)
+[![GitHub forks](https://img.shields.io/github/forks/fb0sh/PixelMart?style=social)](https://github.com/fb0sh/PixelMart)
 
 </div>
